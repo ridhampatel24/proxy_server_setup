@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "2452:2452"
+    depends_on:
+      - apache
+
+  apache:
+    build: ./apache
+
